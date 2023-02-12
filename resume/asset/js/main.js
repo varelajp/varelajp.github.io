@@ -1,62 +1,89 @@
-/** Globar vars ans and consts */
-const sections         = document.getElementById('full-screen-scroller').getElementsByClassName('section');
-const sections_subview = document.getElementById('full-screen-scroller').getElementsByClassName('section-subview');
+M.AutoInit();
 
-// $(function () {
-// $(document).ready(function () {
-window.addEventListener("load", function() {
-  $(".full-screen-scroller").fullScreenScroller();
-
-  // Takes care of navbar heigth to center sections correcty at page loading.
-  for (const section of sections) {
-    section.style.marginTop = document.getElementById('navbar').offsetHeight + 'px';
-  }
-  document.getElementById('navbar-space').style.height = document.getElementById('navbar').offsetHeight + 'px';
-  for (const section_subview of sections_subview) {
-    const subview_height = parseFloat(window.getComputedStyle(section_subview, null).height) - document.getElementById('navbar').offsetHeight;
-    section_subview.style.height = subview_height + 'px';
-  }
-
-  // Carousels interval in milliseconds (2 seconds)
-  const carousels = document.querySelectorAll(".carousel");
-  for (const carousel of carousels) {
-    carousel.interval = 2000;
-  }
+const menuItems = document.querySelectorAll("nav ul li a, #dropdown1 li a");
+const mobileMenuItems = document.querySelectorAll(".sidenav li a, #dropdown2 li a");
+// const sections = document.querySelectorAll(".section");
+const carousels = document.querySelectorAll('.carousel');
+const instancesCarousel = M.Carousel.init(carousels, {
+  indicators: true
 });
 
-window.addEventListener('resize', function(event) {
-  // Takes care of navbar heigth to center sections correcty at page resizing.
-  for (const section of sections) {
-    section.style.marginTop = document.getElementById('navbar').offsetHeight + 'px';
-  }
-  document.getElementById('navbar-space').style.height = document.getElementById('navbar').offsetHeight + 'px';
-  for (const section_subview of sections_subview) {
-    const subview_height = parseFloat(window.getComputedStyle(section_subview, null).height) - document.getElementById('navbar').offsetHeight;
-    section_subview.style.height = subview_height + 'px';
-  }
+const myFullpage = new fullpage('#fullpage', {
+  menu: '#menu',
+  anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+  lockAnchors: true,
+  // sectionsColor: ['#ff5f45', '#0798ec', '#fc6c7c', '#fec401'],
+  sectionsColor: ['#fff', '#f5f5f5', '#fff', '#f5f5f5'],
+  continuousVertical: true,
+  continuousHorizontal:true,
+  // scrollBar: true,
+  navigation: true,
+  navigationPosition: 'right',
+  navigationTooltips: ['About me', 'Skills', 'Education & Work', 'Interests'],
+  slidesNavigation: true,
+  controlArrowsHTML: ['<button class="my-arrow left" onclick="fullpage_api.moveSlideLeft();"><svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#333" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375"></polyline></svg></button>', '<button class="my-arrow right" onclick="fullpage_api.moveSlideRight();"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#333" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8"></polyline></svg></button>'],
+  afterLoad: function(origin, destination, direction, trigger) {
+    menuItems.forEach(element => element.classList.remove('active'));
+    menuItems[destination.index].classList.add("active");
+	},
+  onSlideLeave: function(section, origin, destination, direction, trigger) {
+    switch (destination.index) {
+      case 0:
+        showCarousel(0);
+        break;
+      case 1:
+        showCarousel(1);
+        break;
+      case 2:
+        showCarousel(4);
+        break;
+    }
+  },
 });
 
-$(document).on('click', '.nav-item a', function () {
-  // Changes navbar highlighted item at navbar clicking.
-  $(this).parent().addClass('active').siblings().removeClass('active');
+document.addEventListener('DOMContentLoaded', function() {
+  initMenus();
+  initCarousels();
 });
 
-// someVar = document.querySelectorAll('li.nav-item');
-// console.log(typeof(someVar));
-// document.querySelectorAll('li.nav-item').forEach((nav-item) =>  {
-//   nav-item.addEventListener('click', event => {
-//     console.log(nav-item.classname());
-//   })
-// })
+function initMenus() {
+  for (let i = 0; i < menuItems.length; i++) {
+    menuItems[i].addEventListener("click", () => {
+      if (i < 3) {
+        fullpage_api.moveTo(i + 1);
+      }
+      if (i > 3) {
+        fullpage_api.moveTo('fourthPage', i - 4);
+      }
+    });
+    mobileMenuItems[i].addEventListener("click", () => {
+      if (i < 3) {
+        fullpage_api.moveTo(i + 1);
+      }
+      if (i > 3) {
+        fullpage_api.moveTo('fourthPage', i - 4);
+      }
+    });
+  }
+}
 
-
-document.addEventListener('scroll', function() {
-  // Changes navbar highlighted item at page scrolling.
-  const url = new URL(window.location.href);
-  if ("" !== url.hash) {
-    $(`#link-${url.hash.substring(1)}`).parent().addClass('active').siblings().removeClass('active');
-    if ($(`#link-${url.hash.substring(1)}`).hasClass('dropdown-item')) {
-      $(`#link-${url.hash.substring(1)}`).parent().parent().addClass('active').siblings().removeClass('active');
+function initCarousels() {
+  for (const carousel of instancesCarousel) {
+    setInterval(function(){ carousel.next(); }, 2500);  //Carousels autoplay
+    if (carousel.el.id != 'Sports') {                   //Hide all carousels, except Sports
+      carousel.el.classList.add('hide');
     }
   }
-}, true);
+}
+
+function showCarousel(index) {
+  for (let i = 0; i < carousels.length; i++) {
+    if (i === index) {
+      carousels[i].classList.remove('hide');
+      document.getElementById('link' + carousels[i].id).classList.add('z-depth-2');
+    } else {
+      carousels[i].classList.add('hide');
+      document.getElementById('link' + carousels[i].id).classList.remove('z-depth-2');
+    }
+  }
+}
