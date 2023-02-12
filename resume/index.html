@@ -1,192 +1,122 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="x-ua-compatible" content="ie=edge" charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css" rel="stylesheet" href="./asset/css/fullpage.min.css" />
+  <link type="text/css" rel="stylesheet" href="./asset/css/materialdesignicons.css"/>                       <!--Import Google Icon Font-->
+  <link type="text/css" rel="stylesheet" href="./asset/css/fontawesome.min.css">                            <!--Import FontAwesome Icon Font-->
+  <link type="text/css" rel="stylesheet" href="./asset/css/fontawesome.brands.min.css">                     <!--Import FontAwesome Icon Font-->
+  <link type="text/css" rel="stylesheet" href="./asset/css/fontroboto.css">                                 <!--Import Roboto fonts-->
+  <link type="text/css" rel="stylesheet" href="./asset/css/materialize.min.css" media="screen,projection"/> <!--Import materialize styles-->
+  <link type="text/css" rel="stylesheet" href="./asset/css/styles.css"/>                                    <!--Import site custom styles-->
   <title>Juan Varela - Web Developer</title>
-  <link type="text/css" rel="stylesheet" href="./asset/css/bootstrap.min.css">          <!--Bootstrap core CSS-->
-  <link type="text/css" rel="stylesheet" href="./asset/css/mdb.min.css">                <!--Material Design Bootstrap-->
-  <link type="text/css" rel="stylesheet" href="./asset/css/fsscroller.min.css">         <!--Full Screen Scroller plugin styles-->
-  <link type="text/css" rel="stylesheet" href="./asset/css/materialdesignicons.css">    <!--Import Google Icon Font-->
-  <link type="text/css" rel="stylesheet" href="./asset/css/fontawesome.min.css">        <!--Font Awesome-->
-  <link type="text/css" rel="stylesheet" href="./asset/css/fontawesome.solid.min.css">  <!--Import FontAwesome Icon Font-->
-  <link type="text/css" rel="stylesheet" href="./asset/css/fontawesome.brands.min.css"> <!--Import FontAwesome Icon Font-->
-  <link type="text/css" rel="stylesheet" href="./asset/css/fonts.css">                  <!--Import self hosted fonts-->
-  <link type="text/css" rel="stylesheet" href="./asset/css/styles.css">                 <!--Custom styles-->
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
-
   <!-- Navbar -->
-  <nav id="navbar" class="navbar navbar-expand-sm navbar-dark fixed-top">
-    <div class="section-nav">
-      <!-- Navbar brand -->
-      <span class="navbar-brand" href="#">JUAN VARELA</span>
-      <!-- Collapse button -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobileNav" aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- Collapsible content -->
-      <div class="collapse navbar-collapse" id="mobileNav">
-        <!-- Links -->
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a id="link-section1" class="nav-link fss-nav-item" href="#section1">About me</a>
-          </li>
-          <li class="nav-item">
-            <a id="link-section2" class="nav-link fss-nav-item" href="#section2">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a id="link-section3" class="nav-link fss-nav-item" href="#section3">Education & Work</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a id="link-section4" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Interests</a>
-            <div class="dropdown-menu dropdown-primary" aria-labelledby="link-section4">
-              <a id="link-section41" class="dropdown-item fss-nav-item" href="#section41">Sports</a>
-              <a id="link-section42" class="dropdown-item fss-nav-item" href="#section42">Music</a>
-              <a id="link-section43" class="dropdown-item fss-nav-item" href="#section43">Books</a>
-              <a id="link-section44" class="dropdown-item fss-nav-item" href="#section44">Movies & TV</a>
-            </div>
-          </li>
-        </ul>
-      <!-- Links -->
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <div class="container">
+          <span class="brand-logo">JUAN VARELA</span>
+          <a data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a>About me</a></li>
+            <li><a>Skills</a></li>
+            <li><a>Education & Work</a></li>
+            <li><a class="dropdown-trigger" data-target="dropdown1">Interests<i class="material-icons right">arrow_drop_down</i></a></li>
+          </ul>
+        </div>
       </div>
-      <!-- Collapsible content -->
-    </div>
-  </nav>
+    </nav>
+  </div>
+  <ul id="mobile-menu" class="sidenav">
+    <li><a>About me</a></li>
+    <li class="divider"></li>
+    <li><a>Skills</a></li>
+    <li class="divider"></li>
+    <li><a>Education & Work</a></li>
+    <li class="divider"></li>
+    <li><a class="dropdown-trigger" data-target="dropdown2">Interests<i class="material-icons right">arrow_drop_down</i></a></li>
+  </ul>
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a>Sports</a></li>
+    <li><a>Music</a></li>
+    <li><a>Books</a></li>
+    <li><a>Movies & TV</a></li>
+  </ul>
+  <ul id="dropdown2" class="dropdown-content">
+    <li><a>Sports</a></li>
+    <li><a>Music</a></li>
+    <li><a>Books</a></li>
+    <li><a>Movies & TV</a></li>
+  </ul>
   <!--/.Navbar-->
 
-  <!-- Full screen scroller -->
-  <div id="full-screen-scroller" class="full-screen-scroller">
-
-    <div class="fss-dotted-scrollspy">
-      <button type="button" class="fss-nav-btn fss-mainview-prev">
-        <i class="fa fa-chevron-up"></i>
-      </button>
-      <a href="#section1" class="fss-nav-item active"></a>
-      <a href="#section2" class="fss-nav-item"></a>
-      <a href="#section3" class="fss-nav-item"></a>
-      <a href="#section4" class="fss-nav-item"></a>
-      <button type="button" class="fss-nav-btn fss-mainview-next">
-        <i class="fa fa-chevron-down"></i>
-      </button>
-    </div>
-
-    <div fss-anchor="section1" class="container-fluid fss-mainview fss-active valign-center-flex">
-      <div class="section">
-        <table>
-          <tr class="valign-center-flex">
-            <td>
-              <div class="text-center">
-                <img src="./asset/img/varelajp-1.jpg" class="rounded-circle img-fluid cursor-zoom-in passport-photo" alt="Juan Varela" data-toggle="modal" data-target="#modalPassportPhotoJuan">
-              </div>
-              <div id="modalPassportPhotoJuan" class="modal fade text-center" tabindex="-1" role="dialog" aria-labelledby="modalPassportPhotoJuanLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-body">
-                      <img src="./asset/img/varelajp-1.jpg" class="img-fluid w-100">
-                    </div>
-                    <div class="modal-footer d-block">
-                      <h3>Juan Varela</h3>
-                    </div>
+  <div id="fullpage">
+    <div id="section0" class="section">
+      <div class="valign-wrapper vertical-align">
+        <div class="valign" style="width: 100%;">
+          <div class="container">
+            <table>
+              <tr style="border-bottom: none;">
+                <td style="vertical-align: top; padding: 0">
+                  <div>
+                    <img class="materialboxed circle responsive-img" src="asset/img/varelajp-1.jpg" width="100" data-caption="Juan Varela" alt="Juan Varela" style="margin: 0 auto;">
                   </div>
-                </div>
-              </div>
-              <div id="modalPassportPhotoAmelie" class="modal fade text-center" tabindex="-1" role="dialog" aria-labelledby="modalPassportPhotoAmelieLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-body">
-                      <img src="./asset/img/amelie1.jpg" class="img-fluid w-100">
-                    </div>
-                    <div class="modal-footer d-block">
-                      <h3>Am&eacute;lie Varela</h3>
-                    </div>
+                  <div class="chip">
+                    <i class="material-icons">phone_android</i>
+                    <span class="card-title" style="margin-left: 0px">+58 414 9994551</span>
+                  </div><br>
+                  <div class="chip">
+                    <i class="material-icons">mail</i>
+                    <span class="card-title">juanpvarela@gmail.com</span>
+                  </div><br>
+                  <div class="chip">
+                    <i class="fab fa-twitter"></i>
+                    <span class="card-title" style="margin-left: 0px">@varelajp</span>
+                  </div><br>
+                  <div class="chip">
+                    <i class="fab fa-skype"></i>
+                    <span class="card-title" style="margin-left: 0px">live:juanpablovarela</span>
+                  </div><br>
+                  <div class="chip">
+                    <i class="fab fa-github"></i>
+                    <span class="card-title" style="margin-left: 0px">github.com/varelajp</span>
                   </div>
-                </div>
-              </div>
-              <div id="modalPassportPhotoSahara" class="modal fade text-center" tabindex="-1" role="dialog" aria-labelledby="modalPassportPhotoSaharaLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-body">
-                      <img src="./asset/img/sahara1.jpg" class="img-fluid w-100">
-                    </div>
-                    <div class="modal-footer d-block">
-                      <h3>Sahara Varela</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <span class="font-weight-normal">
-                <h5>
-                  <span class="badge badge-pill badge-light font-weight-light text-left valign-center-flex">
-                    <!-- <i class="material-icons">phone_android</i> -->
-                    <span class="font-color"><i class="fas fa-mobile-alt"></i>&nbsp;+58 414 9994551</span>
-                  </span>
-                </h5>
-                <h5>
-                  <span class="badge badge-pill badge-light font-weight-light text-left valign-center-flex">
-                    <!-- <i class="material-icons">mail</i> -->
-                    <span class="font-color"><i class="fas fa-envelope"></i>&nbsp;juanpvarela@gmail.com</span>
-                  </span>
-                </h5>
-                <h5>
-                  <span class="badge badge-pill badge-light font-weight-light text-left valign-center-flex">
-                    <span class="font-color tex"><i class="fab fa-twitter"></i>&nbsp;@varelajp</span>
-                  </span>
-                </h5>
-                <h5>
-                  <span class="badge badge-pill badge-light font-weight-light text-left valign-center-flex">
-                    <span class="font-color"><i class="fab fa-skype"></i>&nbsp;live:juanpablovarela</span>
-                  </span>
-                </h5>
-                <h5>
-                  <span class="badge badge-pill badge-light font-weight-light text-left valign-center-flex">
-                    <span class="font-color"><i class="fab fa-github"></i>&nbsp;github.com/varelajp</span>
-                  </span>
-                </h5>
-              </span>
-            </td>
-            <td class="px-1">
-              <p class="text-justify">
-                &nbsp;&nbsp;&nbsp;A little bit hedonistic and with a heterogeneous personality. More from numbers than literature.<br>
-                &nbsp;&nbsp;&nbsp;More numbers, although not an expert in fractals or neural networks, nor able to prove the "Fermat Conjecture".<br>
-                &nbsp;&nbsp;&nbsp;Less literature, but I can write a letter with proper spelling and calligraphy.<br>
-                &nbsp;&nbsp;&nbsp;Less literature, but still I was caught by the fictitious Kafka's Metamorphosis, the shadowy S&aacute;bato&#39;s Tunnel, the confused Garc&iacute;a M&aacute;rquez's '"The Autumn of the Patriarch", and the satirical Herrera Luque's "Historia Fabulada".<br>
-                &nbsp;&nbsp;&nbsp;Father of <span class="text-primary cursor-zoom-in" data-toggle="modal" data-target="#modalPassportPhotoAmelie">Am&eacute;lie</span> and <span class="text-primary cursor-zoom-in" data-toggle="modal" data-target="#modalPassportPhotoSahara">Sahara</span> twins. Each one is an improved version of my dreams.<br>
-                &nbsp;&nbsp;&nbsp;Open to test tasks when starting jobs relationships.<br>
-              </p>
-            </td>
-          </tr>
-        </table>
+                </td>
+                <td style="vertical-align: center; padding: 0">
+                  <p>
+                    &nbsp;&nbsp;&nbsp;A little bit hedonistic and with a heterogeneous personality. More from numbers than letters.<br>
+                    &nbsp;&nbsp;&nbsp;More numbers, although not an expert in fractals or neural networks, nor able to prove the "Fermat Conjecture".<br>
+                    &nbsp;&nbsp;&nbsp;Less letters, but I can write a letter with proper spelling and calligraphy.<br>
+                    &nbsp;&nbsp;&nbsp;Less letters, but still I was caught by the fictitious Kafka's Metamorphosis, the shadowy S&aacute;bato&#39;s Tunnel, the confused Oto&ntilde;o del Patriarca of "El Gabo", and the satirical Historia Fabulada of Herrera Luque.<br>
+                    &nbsp;&nbsp;&nbsp;Father of <a class="waves-effect waves-teal" id="linkAmelie1" onclick="document.getElementById('imgLinkAmelie').classList.remove('hide'); document.getElementById('imgLinkAmelie').click();">Am&eacute;lie</a> and <a class="waves-effect waves-teal" id="linkSahara1" onclick="document.getElementById('imgLinkSahara').classList.remove('hide'); document.getElementById('imgLinkSahara').click(); ">Sahara</a> twins. Each one is an improved version of my dreams.<br>
+                    &nbsp;&nbsp;&nbsp;Open to test tasks when starting jobs relationships.<br>
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div fss-anchor="section2" class="container-fluid fss-mainview valign-center-flex">
-      <div class="section">
+    <div id="section1" class="section">
+      <div class="container">
         <table class="table">
-          <thead>
-            <tr class="tr-thin text-center">
-              <th colspan="3" class="border-bottom-0"><span class="font-weight-bold h6"><i class="material-icons">build</i>&nbsp;SKILLS</span></th>
-            </tr>
-          </thead>
-          <!-- <tr>
-            <th class="border-top-0" width="22%"><b>LANGUAGES:</b></th>
-            <td class="border-top-0" width="50%"></td>
-            <td class="border-top-0" width="28%"></td>
-          </tr>
-          <tr class="tr-thin">
-            <td colspan="3">Spanish (native), English (advanced).</td>
+          <th colspan="2" class="center-align"><i class="material-icons">build</i>&nbsp;SKILLS</th>
+          <!-- <tr class="tr-thin">
+            <td width="28%">Languages</td>
+            <td>Spanish (native), English (advanced).</td>
           </tr> -->
           <tr class="tr-thin">
-            <td class="border-top-0" width="27%"></td>
-            <td class="border-top-0 font-weight-bold">EXPERIENCE AT:</td>
-          </tr>
-          <tr class="tr-thin px-1">
-            <td>Programming:</td>
-            <td>Javascript, PHP, Go, C, Perl, Shell, API (REST, SOAP).</td>
+            <td width="28%">Programming:</td>
+            <td>Javascript, PHP, Go, C, Shell, API (REST, SOAP).</td>
           </tr>
           <tr class="tr-thin">
-            <td>Frontend Langs/Tools:</td>
+            <td>Frontend Tools:</td>
             <td>HTML, CSS, Javascript, Webpack.</td>
           </tr>
           <tr class="tr-thin">
@@ -198,7 +128,7 @@
             <td>Symfony (PHP), CodeIgniter (PHP).</td>
           </tr>
           <tr class="tr-thin">
-            <td>Frontend FWs/Libs:</td>
+            <td>Frontend FWs:</td>
             <td>VueJS.</td>
           </tr>
           <tr class="tr-thin">
@@ -211,7 +141,7 @@
           </tr>
           <tr class="tr-thin">
             <td>DBs:</td>
-            <td>MySQL, PostgreSQL, Oracle, SQL Server, Access.</td>
+            <td>MySQL, PostgreSQL, Oracle, MSSQL Server, Access.</td>
           </tr>
           <tr class="tr-thin">
             <td>CMS:</td>
@@ -233,208 +163,141 @@
       </div>
     </div>
 
-    <div fss-anchor="section3" class="container-fluid fss-mainview valign-center-flex">
-      <div class="section">
-        <table class="table">
-          <thead>
-            <tr class="tr-thin text-center">
-              <th class="border-bottom-0"><span class="font-weight-bold h6"><i class="material-icons">school</i>&nbsp;EDUCATION AND WORK</span></th>
-            </tr>
-          </thead>
+    <div id="section2" class="section">
+      <div class="container">
+        <table>
+          <th class="center-align"><i class="material-icons">school</i>&nbsp;EDUCATION</th>
           <tr class="tr-thin">
-            <td class="border-top-0 font-weight-bold">EDUCATION</td>
+            <td class="tr-thin" width="65%">- Degree in Computer Science. @UDO_Anzoategui (jul 2006).</td>
           </tr>
           <tr class="tr-thin">
-            <td>Degree in Computer Science. <i class="fab fa-twitter"></i>@UDO_Anzoategui (jul 2006).</td>
+            <td class="tr-thin">- Master's Degree in Computer Management. @UDO_Anzoategui (oct 2017).</td>
+          </tr>
+          <th class="center-align"><i class="material-icons">work</i>&nbsp;WORK</th>
+          <tr class="tr-thin">
+            <td class="tr-thin" width="65%">- UNIVERSIDAD DE ORIENTE, Sucre, Vzla. Intern - Web Developer (oct 2004 - jun 2005).</td>
           </tr>
           <tr class="tr-thin">
-            <td>Master's Degree in Computer Management. <i class="fab fa-twitter"></i>@UDO_Anzoategui (oct 2017).</td>
+            <td class="tr-thin">- CONSEJO NACIONAL ELECTORAL, Sucre, Vzla. PgSQL/MySQL DBA (jan 2005 - jun 2005).</td>
           </tr>
           <tr class="tr-thin">
-            <td class="border-top-0 font-weight-bold">WORK</td>
+            <td class="tr-thin">- PDVSA. Monagas. Vzla. Web Development and Systems Analyisis (aug 2005 - sep 2007).</td>
           </tr>
           <tr class="tr-thin">
-            <td>UNIVERSIDAD DE ORIENTE, Sucre, Vzla. Intern - Web Developer (oct 2004 - jun 2005).</td>
+            <td class="tr-thin">- PDVSA. Sucre. Vzla. Systems Analist (oct 2007 - apr 2009).</td>
           </tr>
           <tr class="tr-thin">
-            <td>CONSEJO NACIONAL ELECTORAL, Sucre, Vzla. PgSQL/MySQL DBA (jan 2005 - jun 2005).</td>
+            <td class="tr-thin">- PDVSA. Sucre. Vzla. Automation and Control - Oil &amp; Gas Offshore Eng (may 2009 - sep 2012).</td>
           </tr>
           <tr class="tr-thin">
-            <td>PDVSA. Monagas. Vzla. Web Development and Systems Analyisis (aug 2005 - sep 2007).</td>
-          </tr>
-          <tr class="tr-thin">
-            <td>PDVSA. Sucre. Vzla. Systems Analist (oct 2007 - apr 2009).</td>
-          </tr>
-          <tr class="tr-thin">
-            <td>PDVSA. Sucre. Vzla. Automation and Control - Oil &amp; Gas Offshore Eng (may 2009 - sep 2012).</td>
-          </tr>
-          <tr class="tr-thin">
-            <td>PDVSA. Sucre. Vzla. IT &amp; App Support (oct 2012 - dec 2018).</td>
+            <td class="tr-thin">- PDVSA. Sucre. Vzla. IT &amp; Apps Support (oct 2012 - 2019).</td>
           </tr>
         </table>
       </div>
     </div>
 
-    <div fss-anchor="section4" class="fss-mainview">
-      <div class="container-fluid fss-subview">
-        <div class="fss-dotted-scrollspy">
-          <button type="button" class="fss-nav-btn fss-subview-prev">
-            <i class="fa fa-chevron-left"></i>
-          </button>
-          <a href="#section41" class="fss-nav-item active"></a>
-          <a href="#section42" class="fss-nav-item"></a>
-          <a href="#section43" class="fss-nav-item"></a>
-          <a href="#section44" class="fss-nav-item"></a>
-          <button type="button" class="fss-nav-btn fss-subview-next">
-            <i class="fa fa-chevron-right"></i>
-          </button>
-        </div>
-        <div id="navbar-space" class="w-100"></div>
-
-        <div fss-anchor="section41" class="container-fluid fss-subview-item">
-          <div class="section-subview valign-center-container">
-            <div class="w-100 valign-center-content">
-              <table class="table">
-                <thead>
-                  <tr class="tr-thin text-center">
-                    <th class="border-bottom-0"><span class="font-weight-bold h6"><i class="material-icons">directions_run</i>&nbsp;SPORTS</span></th>
-                  </tr>
-                </thead>
-              </table>
-              <div id="carouselSports" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li data-target="#carouselSports" data-slide-to="0" class="active"></li>
-                  <li data-target="#carouselSports" data-slide-to="1"></li>
-                  <li data-target="#carouselSports" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img class="d-block mx-auto" src="./asset/img/sports/running1.jpg" alt="Running">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block mx-auto" src="./asset/img/sports/tabletennis1.jpg" alt="Table Tennis">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block mx-auto" src="./asset/img/sports/tabletennis2.jpg" alt="Table Tennis">
-                  </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselSports" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselSports" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div fss-anchor="section42" class="container-fluid fss-subview-item">
-          <div class="section-subview valign-center-container">
-            <div class="w-100 valign-center-content">
-              <table class="table">
-                <thead>
-                  <tr class="tr-thin text-center">
-                    <th class="border-bottom-0"><span class="font-weight-bold h6"><i class="material-icons">music_note</i>&nbsp;MUSIC</span></th>
-                  </tr>
-                </thead>
-              </table>
-              <div id="carouselMusic" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li data-target="#carouselMusic" data-slide-to="0" class="active"></li>
-                  <li data-target="#carouselMusic" data-slide-to="1"></li>
-                  <li data-target="#carouselMusic" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img class="d-block mx-auto" src="./asset/img/music/fito_abre.jpg" alt="Fito P&aacute;ez">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block mx-auto" src="./asset/img/music/joaquin_19dias.jpg" alt="Joaqu&iacute;n Sabina">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block mx-auto" src="./asset/img/music/silvio_diasYFlores.jpeg" alt="Silvio Rodr&iacute;guez">
-                  </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselMusic" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselMusic" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div fss-anchor="section43" class="container-fluid fss-subview-item">
-          <div class="section-subview valign-center-flex">
-            <div class="w-100">
-              <table class="table">
-                <thead>
-                  <tr class="tr-thin text-center">
-                    <th class="border-bottom-0"><span class="font-weight-bold h6"><i class="material-icons">book</i>&nbsp;BOOKS</span></th>
-                  </tr>
-                </thead>
-              </table>
-              <div id="carouselBooks" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li data-target="#carouselBooks" data-slide-to="0" class="active"></li>
-                  <li data-target="#carouselBooks" data-slide-to="1"></li>
-                  <li data-target="#carouselBooks" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img class="d-block mx-auto" src="./asset/img/books/Dostoyevski-CrimenYCastigo.jpeg" alt="Crime and Punishment">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block mx-auto" src="./asset/img/books/HerreraLuque-LaHistoriaFabulada.jpeg" alt="La Historia fabulada">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block mx-auto" src="./asset/img/books/Sabato-ElTunel.jpg" alt="The Tunnel">
-                  </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselBooks" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselBooks" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div fss-anchor="section44" class="container-fluid fss-subview-item">
-          <div class="section-subview valign-center-container">
-            <div class="w-100 valign-center-content">
-              <table class="table">
-                <thead>
-                  <tr class="tr-thin text-center">
-                    <th class="border-bottom-0"><span class="font-weight-bold h6"><i class="material-icons">movie_filter</i>&nbsp;MOVIES</span></th>
-                  </tr>
-                </thead>
-              </table>
-            </div>
-          </div>
+    <div id="section3" class="section">
+      <div class="slide">
+        <a id="linkSports"    onclick="showCarousel(0);"></a>
+        <div id="Sports" class="carousel">
+          <div class="carousel-fixed-item"><h6><i class="material-icons">directions_run</i>&nbsp;<b>Sports</b></h6></div>
+          <a class="carousel-item"><img class="responsive-img" src="asset/img/sports/running1.jpg"                              onclick="document.getElementById('imgSports-running1').classList.remove('hide');                             document.getElementById('imgSports-running1').click();"></a>
+          <a class="carousel-item"><img class="responsive-img" src="asset/img/sports/tabletennis1.jpg"                          onclick="document.getElementById('imgSports-tabletennis1').classList.remove('hide');                         document.getElementById('imgSports-tabletennis1').click();"></a>
+          <a class="carousel-item"><img class="responsive-img" src="asset/img/sports/tabletennis2.jpg"                          onclick="document.getElementById('imgSports-tabletennis2').classList.remove('hide');                         document.getElementById('imgSports-tabletennis2').click();"></a>
         </div>
       </div>
+      <div class="slide">
+        <a id="linkJSabina"    onclick="showCarousel(1);" class="z-depth-2">Joaqu&iacute;n Sabina</a> |
+        <a id="linkFPaez"      onclick="showCarousel(2);">Fito P&aacute;ez</a> |
+        <a id="linkSRodriguez" onclick="showCarousel(3);">Silvio Rodr&iacute;guez</a>
+        <div id="JSabina" class="carousel">
+          <div class="carousel-fixed-item"><h6><i class="material-icons">library_music</i>&nbsp;<b>Music - Joaqu&iacute;n Sabina</b></h6></div>
+          <a class="carousel-item"><img class="responsive-img" src="asset/img/music/joaquin_fisica.jpg"                         onclick="document.getElementById('imgMusic-joaquin_fisica').classList.remove('hide');                        document.getElementById('imgMusic-joaquin_fisica').click();">  </a>
+          <a class="carousel-item"><img class="responsive-img" src="asset/img/music/joaquin_yoMiMe.jpg"                         onclick="document.getElementById('imgMusic-joaquin_yoMiMe').classList.remove('hide');                        document.getElementById('imgMusic-joaquin_yoMiMe').click();">  </a>
+          <a class="carousel-item"><img class="responsive-img" src="asset/img/music/joaquin_enemigos.jpg"                       onclick="document.getElementById('imgMusic-joaquin_enemigos').classList.remove('hide');                      document.getElementById('imgMusic-joaquin_enemigos').click();"></a>
+          <a class="carousel-item"><img class="responsive-img" src="asset/img/music/joaquin_19dias.jpg"                         onclick="document.getElementById('imgMusic-joaquin_19dias').classList.remove('hide');                        document.getElementById('imgMusic-joaquin_19dias').click();">  </a>
+          <a class="carousel-item"><img class="responsive-img" src="asset/img/music/joaquin_alivio.jpg"                         onclick="document.getElementById('imgMusic-joaquin_alivio').classList.remove('hide');                        document.getElementById('imgMusic-joaquin_alivio').click();">  </a>
+        </div>
+        <div id="FPaez" class="carousel">
+          <div class="carousel-fixed-item"><h6><i class="material-icons">library_music</i>&nbsp;<b>Music - Fito P&aacute;ez</b></h6></div>
+          <a class="carousel-item"><img class="responsive-img" src="asset/img/music/fito_elAmor.jpg"                            onclick="document.getElementById('imgMusic-fito_elAmor').classList.remove('hide');                           document.getElementById('imgMusic-fito_elAmor').click();">     </a>
+          <a class="carousel-item"><img class="responsive-img" src="asset/img/music/fito_euforia.jpg"                           onclick="document.getElementById('imgMusic-fito_euforia').classList.remove('hide');                          document.getElementById('imgMusic-fito_euforia').click();">    </a>
+          <a class="carousel-item"><img class="responsive-img" src="asset/img/music/fito_abre.jpg"                              onclick="document.getElementById('imgMusic-fito_abre').classList.remove('hide');                             document.getElementById('imgMusic-fito_abre').click();">       </a>
+          <a class="carousel-item"><img class="responsive-img" src="asset/img/music/fito_reySol.jpg"                            onclick="document.getElementById('imgMusic-fito_reySol').classList.remove('hide');                           document.getElementById('imgMusic-fito_reySol').click();">     </a>
+          <a class="carousel-item"><img class="responsive-img" src="asset/img/music/fito_elMundoCabe.jpg"                       onclick="document.getElementById('imgMusic-fito_elMundoCabe').classList.remove('hide');                      document.getElementById('imgMusic-fito_elMundoCabe').click();"></a>
+        </div>
+        <div id="SRodriguez" class="carousel">
+          <div class="carousel-fixed-item"><h6><i class="material-icons">library_music</i>&nbsp;<b>Music - Silvio Rodr&iacute;guez</b></h6></div>
+          <a class="carousel-item"><img class="responsive-img" src="asset/img/music/silvio_diasYFlores.jpg"                     onclick="document.getElementById('imgMusic-silvio_diasYFlores').classList.remove('hide');                    document.getElementById('imgMusic-silvio_diasYFlores').click();"> </a>
+          <a class="carousel-item"><img class="responsive-img" src="asset/img/music/silvio_mujeres.jpg"                         onclick="document.getElementById('imgMusic-silvio_mujeres').classList.remove('hide');                        document.getElementById('imgMusic-silvio_mujeres').click();">     </a>
+          <a class="carousel-item"><img class="responsive-img" src="asset/img/music/silvio_raboDeNube.jpg"                      onclick="document.getElementById('imgMusic-silvio_raboDeNube').classList.remove('hide');                     document.getElementById('imgMusic-silvio_raboDeNube').click();">  </a>
+          <a class="carousel-item"><img class="responsive-img" src="asset/img/music/silvio_ohMelancolia.jpg"                    onclick="document.getElementById('imgMusic-silvio_ohMelancolia').classList.remove('hide');                   document.getElementById('imgMusic-silvio_ohMelancolia').click();"></a>
+          <a class="carousel-item"><img class="responsive-img" src="asset/img/music/silvio_expedicion.jpg"                      onclick="document.getElementById('imgMusic-silvio_expedicion').classList.remove('hide');                     document.getElementById('imgMusic-silvio_expedicion').click();">  </a>
+        </div>
+      </div>
+      <div class="slide">
+        <a id="linkFDostoyevski" onclick="showCarousel(4);" class="z-depth-2">Dostoyevski</a> |
+        <a id="linkESabato"      onclick="showCarousel(5);">S&aacute;bato</a> |
+        <a id="linkFHerrera"     onclick="showCarousel(6);">Herrea Luque</a>
+        <div id="FDostoyevski" class="carousel">
+          <div class="carousel-fixed-item"><h6><i class="material-icons">menu_book</i>&nbsp;<b>Books - Dostoyevski</b></h6></div>
+          <a class="carousel-item"><img class="responsive-img" src="asset/img/books/Dostoyevski-CrimenYCastigo.jpg"             onclick="document.getElementById('imgBooksDostoyevski-CrimenYCastigo').classList.remove('hide');             document.getElementById('imgBooksDostoyevski-CrimenYCastigo').click();">      </a>
+          <a class="carousel-item"><img class="responsive-img" src="asset/img/books/Dostoyevski-ElJugador.jpg"                  onclick="document.getElementById('imgBooksDostoyevski-ElJugador').classList.remove('hide');                  document.getElementById('imgBooksDostoyevski-ElJugador').click();">           </a>
+          <a class="carousel-item"><img class="responsive-img" src="asset/img/books/Dostoyevski-LosHermanosKaramazov.jpg"       onclick="document.getElementById('imgBooksDostoyevski-LosHermanosKaramazov').classList.remove('hide');       document.getElementById('imgBooksDostoyevski-LosHermanosKaramazov').click();"></a>
+        </div>
+        <div id="ESabato" class="carousel">
+          <div class="carousel-fixed-item"><h6><i class="material-icons">menu_book</i>&nbsp;<b>Books - S&aacute;bato</b></h6></div>
+          <a class="carousel-item"><img class="responsive-img" src="asset/img/books/Sabato-ElTunel.jpg"                         onclick="document.getElementById('imgBooksSabato-ElTunel').classList.remove('hide');                         document.getElementById('imgBooksSabato-ElTunel').click();">              </a>
+          <a class="carousel-item"><img class="responsive-img" src="asset/img/books/Sabato-SobreHeroesYTumbas.jpg"              onclick="document.getElementById('imgBooksSabato-SobreHeroesYTumbas').classList.remove('hide');              document.getElementById('imgBooksSabato-SobreHeroesYTumbas').click();">   </a>
+          <a class="carousel-item"><img class="responsive-img" src="asset/img/books/Sabato-AbaddonElExterminador.jpg"           onclick="document.getElementById('imgBooksSabato-AbaddonElExterminador').classList.remove('hide');           document.getElementById('imgBooksSabato-AbaddonElExterminador').click();"></a>
+        </div>
+        <div id="FHerrera" class="carousel">
+          <div class="carousel-fixed-item"><h6><i class="material-icons">menu_book</i>&nbsp;<b>Books - Herrera Luque</b></h6></div>
+          <a class="carousel-item"><img class="responsive-img" src="asset/img/books/HerreraLuque-BovesElUrogallo.jpg"           onclick="document.getElementById('imgBooksHerreraLuque-BovesElUrogallo').classList.remove('hide');           document.getElementById('imgBooksHerreraLuque-BovesElUrogallo').click();">          </a>
+          <a class="carousel-item"><img class="responsive-img" src="asset/img/books/HerreraLuque-LosAmosDelValle.jpg"           onclick="document.getElementById('imgBooksHerreraLuque-LosAmosDelValle').classList.remove('hide');           document.getElementById('imgBooksHerreraLuque-LosAmosDelValle').click();">          </a>
+          <a class="carousel-item"><img class="responsive-img" src="asset/img/books/HerreraLuque-LaHistoriaFabulada.jpg"        onclick="document.getElementById('imgBooksHerreraLuque-LaHistoriaFabulada').classList.remove('hide');        document.getElementById('imgBooksHerreraLuque-LaHistoriaFabulada').click();">       </a>
+          <a class="carousel-item"><img class="responsive-img" src="asset/img/books/HerreraLuque-CasaDelPezQueEscupeElAgua.jpg" onclick="document.getElementById('imgBooksHerreraLuque-CasaDelPezQueEscupeElAgua').classList.remove('hide'); document.getElementById('imgBooksHerreraLuque-CasaDelPezQueEscupeElAgua').click();"></a>
+        </div>
+      </div>
+      <div class="slide">
+        <h1><i class="material-icons">movie_filter</i>&nbsp;Movies & TV</h1>
+      </div>
     </div>
-
   </div>
-  <!--/.Full screen scroller -->
 
-  <script src="./asset/js/jquery-3.4.1.min.js"></script>
-  <script src="./asset/js/popper.min.js"></script>
-  <script src="./asset/js/bootstrap.min.js"></script>
-  <!-- Material Design Bootstrap core JavaScript -->
-  <script src="./asset/js/mdb.min.js"></script>
-  <!-- Full Screen Scroller plugin JavaScript -->
-  <script src="./asset/js/mdbFsscroller.min.js"></script>
-  <!-- Custom JavaScript -->
-  <script src="./asset/js/main.js"></script>
+  <img id="imgLinkSahara"                                  class="hide materialboxed responsive-img" src="asset/img/sahara1.jpg"                                      width="1" data-caption="Sahara Varela"                                          alt="Sahara Varela">
+  <img id="imgLinkAmelie"                                  class="hide materialboxed responsive-img" src="asset/img/amelie1.jpg"                                      width="1" data-caption="Am&eacute;lie Varela"                                   alt="Am&eacute;lie Varela">
+  <img id="imgSports-running1"                             class="hide materialboxed responsive-img" src="asset/img/sports/running1.jpg"                              width="1" data-caption="Running"                                                alt="Running">
+  <img id="imgSports-tabletennis1"                         class="hide materialboxed responsive-img" src="asset/img/sports/tabletennis1.jpg"                          width="1" data-caption="Table Tennis"                                           alt="Table Tennis">
+  <img id="imgSports-tabletennis2"                         class="hide materialboxed responsive-img" src="asset/img/sports/tabletennis2.jpg"                          width="1" data-caption="Table Tennis"                                           alt="Table Tennis">
+  <img id="imgMusic-joaquin_fisica"                        class="hide materialboxed responsive-img" src="asset/img/music/joaquin_fisica.jpg"                         width="1" data-caption="Joaqu&iacute;n Sabina - F&iacute;sica y Qu&iacute;mica" alt="Joaqu&iacute;n Sabina">
+  <img id="imgMusic-joaquin_yoMiMe"                        class="hide materialboxed responsive-img" src="asset/img/music/joaquin_yoMiMe.jpg"                         width="1" data-caption="Joaqu&iacute;n Sabina - Yo, mi, me, contigo"            alt="Joaqu&iacute;n Sabina">
+  <img id="imgMusic-joaquin_enemigos"                      class="hide materialboxed responsive-img" src="asset/img/music/joaquin_enemigos.jpg"                       width="1" data-caption="Joaqu&iacute;n Sabina - Enemigos &Iacute;ntimos"        alt="Joaqu&iacute;n Sabina">
+  <img id="imgMusic-joaquin_19dias"                        class="hide materialboxed responsive-img" src="asset/img/music/joaquin_19dias.jpg"                         width="1" data-caption="Joaqu&iacute;n Sabina - 19 D&iacute;as y 500 Noches"    alt="Joaqu&iacute;n Sabina">
+  <img id="imgMusic-joaquin_alivio"                        class="hide materialboxed responsive-img" src="asset/img/music/joaquin_alivio.jpg"                         width="1" data-caption="Joaqu&iacute;n Sabina - Alivio de luto"                 alt="Joaqu&iacute;n Sabina">
+  <img id="imgMusic-fito_elAmor"                           class="hide materialboxed responsive-img" src="asset/img/music/fito_elAmor.jpg"                            width="1" data-caption="Fito P&aacute;ez - El amor despu&eacute;s del amor"     alt="Fito P&aacute;ez">
+  <img id="imgMusic-fito_euforia"                          class="hide materialboxed responsive-img" src="asset/img/music/fito_euforia.jpg"                           width="1" data-caption="Fito P&aacute;ez - Euforia"                             alt="Fito P&aacute;ez">
+  <img id="imgMusic-fito_abre"                             class="hide materialboxed responsive-img" src="asset/img/music/fito_abre.jpg"                              width="1" data-caption="Fito P&aacute;ez - Abre"                                alt="Fito P&aacute;ez">
+  <img id="imgMusic-fito_reySol"                           class="hide materialboxed responsive-img" src="asset/img/music/fito_reySol.jpg"                            width="1" data-caption="Fito P&aacute;ez - Rey Sol"                             alt="Fito P&aacute;ez">
+  <img id="imgMusic-fito_elMundoCabe"                      class="hide materialboxed responsive-img" src="asset/img/music/fito_elMundoCabe.jpg"                       width="1" data-caption="Fito P&aacute;ez - El mundo cabe en una canci&oacute;n" alt="Fito P&aacute;ez">
+  <img id="imgMusic-silvio_diasYFlores"                    class="hide materialboxed responsive-img" src="asset/img/music/silvio_diasYFlores.jpg"                     width="1" data-caption="Silvio Rodr&iacute;guez - D&iacute;s y Flores"          alt="Silvio Rodr&iacute;guez">
+  <img id="imgMusic-silvio_mujeres"                        class="hide materialboxed responsive-img" src="asset/img/music/silvio_mujeres.jpg"                         width="1" data-caption="Silvio Rodr&iacute;guez - Mujeres"                      alt="Silvio Rodr&iacute;guez">
+  <img id="imgMusic-silvio_raboDeNube"                     class="hide materialboxed responsive-img" src="asset/img/music/silvio_raboDeNube.jpg"                      width="1" data-caption="Silvio Rodr&iacute;guez - Rabo de nube"                 alt="Silvio Rodr&iacute;guez">
+  <img id="imgMusic-silvio_ohMelancolia"                   class="hide materialboxed responsive-img" src="asset/img/music/silvio_ohMelancolia.jpg"                    width="1" data-caption="Silvio Rodr&iacute;guez - Oh Melancol&iacute;a!"        alt="Silvio Rodr&iacute;guez">
+  <img id="imgMusic-silvio_expedicion"                     class="hide materialboxed responsive-img" src="asset/img/music/silvio_expedicion.jpg"                      width="1" data-caption="Silvio Rodr&iacute;guez - Expedici&oacute;n"            alt="Silvio Rodr&iacute;guez">
+  <img id="imgBooksDostoyevski-CrimenYCastigo"             class="hide materialboxed responsive-img" src="asset/img/books/Dostoyevski-CrimenYCastigo.jpg"             width="1" data-caption="Crimen y Castigo"                                       alt="Crimen y Castigo">
+  <img id="imgBooksDostoyevski-ElJugador"                  class="hide materialboxed responsive-img" src="asset/img/books/Dostoyevski-ElJugador.jpg"                  width="1" data-caption="El Jugador"                                             alt="El Jugador">
+  <img id="imgBooksDostoyevski-LosHermanosKaramazov"       class="hide materialboxed responsive-img" src="asset/img/books/Dostoyevski-LosHermanosKaramazov.jpg"       width="1" data-caption="Los Hermanos Karamazov"                                 alt="Los Hermanos Karamazov">
+  <img id="imgBooksSabato-ElTunel"                         class="hide materialboxed responsive-img" src="asset/img/books/Sabato-ElTunel.jpg"                         width="1" data-caption="El Tunel"                                               alt="El Tunel">
+  <img id="imgBooksSabato-SobreHeroesYTumbas"              class="hide materialboxed responsive-img" src="asset/img/books/Sabato-SobreHeroesYTumbas.jpg"              width="1" data-caption="Sobre H&eacute;roes Y Tumbas"                           alt="Sobre H&eacute;roes Y Tumbas">
+  <img id="imgBooksSabato-AbaddonElExterminador"           class="hide materialboxed responsive-img" src="asset/img/books/Sabato-AbaddonElExterminador.jpg"           width="1" data-caption="Abaddon El Exterminador"                                alt="Abaddon El Exterminador">
+  <img id="imgBooksHerreraLuque-BovesElUrogallo"           class="hide materialboxed responsive-img" src="asset/img/books/HerreraLuque-BovesElUrogallo.jpg"           width="1" data-caption="Boves El Urogallo"                                      alt="Boves El Urogallo">
+  <img id="imgBooksHerreraLuque-LosAmosDelValle"           class="hide materialboxed responsive-img" src="asset/img/books/HerreraLuque-LosAmosDelValle.jpg"           width="1" data-caption="Los Amos Del Valle"                                     alt="Los Amos Del Valle">
+  <img id="imgBooksHerreraLuque-LaHistoriaFabulada"        class="hide materialboxed responsive-img" src="asset/img/books/HerreraLuque-LaHistoriaFabulada.jpg"        width="1" data-caption="La Historia Fabulada"                                   alt="La Historia Fabulada">
+  <img id="imgBooksHerreraLuque-CasaDelPezQueEscupeElAgua" class="hide materialboxed responsive-img" src="asset/img/books/HerreraLuque-CasaDelPezQueEscupeElAgua.jpg" width="1" data-caption="En la casa del pez que escupe el agua"                  alt="En la casa del pez que escupe el agua">
+
+  <script type="text/javascript" src="./asset/js/fullpage.min.js"></script>
+  <script type="text/javascript" src="./asset/js/materialize.min.js"></script>
+  <script type="text/javascript" src="./asset/js/main.js"></script>
 </body>
 </html>

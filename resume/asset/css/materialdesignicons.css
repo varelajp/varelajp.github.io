@@ -1,12 +1,15 @@
-/* fallback */
+/*!
+ * Material design Icons Font Styles
+ * No Copyright
+ * No License
+ */
+ /* fallback */
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  /* src: url(../font/material-icons/material-icons.woff2) format('woff2'); */
-  src: url(../font/material-icons/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+  src: url(../font/material-icons/material-icons.woff2) format('woff2');
 }
-
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
@@ -19,6 +22,6 @@
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
-  -moz-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
   -moz-osx-font-smoothing: grayscale;
 }

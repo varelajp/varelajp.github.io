@@ -1,0 +1,32 @@
+/*!
+ * Custom Font Styles
+ * No Copyright
+ * No License
+ */
+/* .roboto {
+  font-family: 'Roboto', sans-serif;
+} */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'),
+       local('Roboto-Regular'),
+       url('../font/roboto/Roboto-Regular.woff2') format('woff2'),
+       url('../font/roboto/Roboto-Regular.woff') format('woff'),
+       url('../font/roboto/Roboto-Regular.ttf') format('truetype'),
+       url('../font/roboto/Roboto-Regular.svg#robotoregular') format('svg'),
+       url('../font/roboto/Roboto-Regular.eot') format('eot');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'),
+       local('Roboto-Bold'),
+       url('../font/roboto/Roboto-Bold.woff2') format('woff2'),
+       url('../font/roboto/Roboto-Bold.woff') format('woff'),
+       url('../font/roboto/Roboto-Bold.ttf') format('truetype'),
+       url('../font/roboto/Roboto-Bold.svg#robotobold') format('svg'),
+       url('../font/roboto/Roboto-Bold.eot') format('eot');
+}
